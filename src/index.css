@@ -1,13 +1,312 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@700&family=Fira+Sans:wght@300;400;700&family=Kaushan+Script&family=Montserrat:wght@600&family=Noto+Serif:wght@400;700&family=Roboto:wght@100;300;400;700&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.main-container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow-y:scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type:y mandatory;
 }
+
+.fixed-position {
+  position: fixed;
+  width: 100%;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  margin:0;
+}
+
+.title{
+  color:#3d3d3d;
+  text-transform: capitalize;
+}
+p{
+  color: #fff;
+  font-size:1rem;
+  
+}
+
+h1 {
+  font-size: 5.94rem;
+  line-height:5.94rem;
+  letter-spacing:-.36rem;
+}
+
+h2{
+  font-size:5.5rem;
+}
+
+h3{
+  font-size:4rem;
+}
+
+h4{
+  font-size:2.2rem;
+  
+}
+
+h5{
+  font-size:2rem;
+  line-height:3rem;
+}
+
+span{
+  color:#c32865;
+}
+
+ul{
+  padding-left:0;
+}
+
+li{
+  color:#fff;
+  font-size:.86rem;
+  list-style:none;
+}
+
+
+li, p{
+  line-height:1.9rem;
+}
+
+
+.general-container{
+  max-width:1200px;
+  width:90%;
+  margin:0 auto;
+}
+
+.btn-div{
+  position:relative;
+}
+.button {
+  height:50px;
+  background:#c32865;
+  border:none;
+  outline:0;
+  box-shadow:0;
+  min-width:200px;
+  margin:0 auto;
+  position:absolute;
+  top:0;
+  display:flex;justify-content:center;
+  align-items:center;
+  color:#fffffe;
+  transition:all 0.8s;
+  font-size:1rem;
+  font-family: 'Montserrat', sans-serif ;
+  cursor:pointer;
+  text-decoration:none;
+  letter-spacing:.1rem;
+}
+.button:before, .button:after {
+  content:"";
+  position:absolute;
+  height:0;
+  width:0;
+  border:0px solid #c32865;
+}
+.button:before {
+  top:-2px;
+  right:-2px;
+}
+.button:after {
+  bottom:-2px;
+  left:-2px;
+}
+.button:hover:before, .button:hover:after {
+  width:100%;
+  height:100%;
+  border:2px solid #c32865;
+}
+.button:hover:before {
+  border-bottom-color:transparent;
+  border-right-color:transparent;
+  transition: width 0.4s 0s, height 0.4s 0.4s;
+}
+.button:hover:after {
+  border-top-color:transparent;
+  border-left-color:transparent;
+  transition: width 0.4s 0.8s, height 0.4s 1.2s, border 0s 0.8s;
+}
+.button:hover {
+  background:transparent;
+  color:#c32865;
+}
+
+
+.fixed-footer{
+  position:fixed;
+  color:#fff;
+  bottom:10px;
+  width:100%;
+  padding:20px 50px ;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:2000;
+}
+
+.icons{
+  display:flex;
+
+}
+
+.socials{
+  margin:0 20px;
+}
+
+@media screen and (max-width:400px){
+  .socials{
+    margin:0 10px;
+  }
+}
+
+
+
+.socials:hover{
+  color:#c32865 !important;
+  cursor:pointer;
+}
+
+/* media query */
+@media screen and (max-width:789px){
+  .button{
+    width:150px;
+    font-size:.8rem;
+  }
+  p{
+   
+    font-size:1rem;
+    
+  }
+  
+  h1 {
+    font-size: 4.94rem;
+    line-height:5.94rem;
+  }
+  
+  h2{
+    font-size:4.2rem;
+  }
+  
+  h3{
+    font-size:3rem;
+  }
+  
+  h4{
+    font-size:1.9rem;
+    
+  }
+  
+  h5{
+    font-size:1.5rem;
+    line-height:2rem;
+  }
+}
+
+
+@media screen and (max-width:600px){
+  p{
+   
+    font-size:.8rem;
+    line-height:1rem;
+    
+  }
+
+  li{
+    font-size:.6rem;
+    line-height:1rem;
+  }
+  
+  h1 {
+    font-size: 3.4rem;
+    line-height:3.4rem;
+  }
+  
+  h2{
+    font-size:2.8rem;
+    line-height:3.9rem;
+  }
+  
+  h3{
+    font-size:2rem;
+  }
+  
+  h4{
+    font-size:1.3rem;
+    line-height:2rem;
+    
+  }
+  
+  h5{
+    font-size:1rem;
+    line-height:1.5rem;
+  }
+}
+
+
+@media screen and (max-width:600px){
+  p{
+   
+    font-size:.8rem;
+    line-height:1.4rem;
+    
+  }
+
+  li{
+    font-size:.8rem;
+    line-height:1.4rem;
+  }
+  
+  h1 {
+    font-size: 3.4rem;
+    line-height:4.4rem;
+  }
+  
+  h2{
+    font-size:2.8rem;
+    line-height:3.9rem;
+  }
+  
+  h3{
+    font-size:2rem;
+  }
+  
+  h4{
+    font-size:1.3rem;
+    line-height:2rem;
+    
+  }
+  
+  h5{
+    font-size:1rem;
+    line-height:1.5rem;
+  }
+}
+
