@@ -15,19 +15,26 @@ height:100%;
 width:100%;
 }
 
+.content-display::-webkit-scrollbar {
+  width: 8px;
+  background-color: #fff;
+}
 
+.content-display::-webkit-scrollbar-thumb {
+  background-color: #1B1B1B;
+}
 .content-display{
   display:flex;
   justify-content: space-between;
   height:100vh;
-  padding-bottom:50px;
-  overflow:scroll;
+  overflow-y:scroll;
 
   @media screen and (max-width:1000px){
     flex-direction:column;
     height:100%;
   }
 }
+
 
 .about-work{
   width:60%;

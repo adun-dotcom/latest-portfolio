@@ -22,7 +22,7 @@ export default function Projects() {
           <p>The world of web development keeps growing at an extremely rapid rate. My aim has been to evolve with it. I'm learning and gaining new skills everyday.</p>
           </div>
           
-        <div>
+        <div className='project-content'>
           <div className="work">
             <div className="image-div">
               <img src={robotics} alt="app image" />

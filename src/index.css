@@ -13,7 +13,14 @@ body {
   padding: 0;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff;
+}
 
+body::-webkit-scrollbar-thumb {
+  background-color: #1B1B1B;
+}
 .main-container{
   position: relative;
   width: 100%;
