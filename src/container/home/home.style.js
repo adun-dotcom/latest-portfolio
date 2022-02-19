@@ -9,18 +9,17 @@ width:100%;
 
 
 .bg-div{
-    background:rgba(0,0,0,.2) url(${Image});
+    background:rgba(0,0,0,.4) url(${Image});
     background-repeat:no-repeat;
     background-position:center;
     position:relative;
     background-size: cover;
      background-attachment: fixed;
-    background-blend-mode:overlay;
-    filter: blur(2.6px);
-      -webkit-filter: blur(2.6px);
+    background-blend-mode:multiply;
+    filter: blur(5px);
+      -webkit-filter: blur(5px);
     height:100%;
     width:100%;
-    image-rendering: pixelated;
     display:flex;
     flex-direction:column;
     align-items:center;

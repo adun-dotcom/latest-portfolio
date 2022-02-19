@@ -26,7 +26,7 @@ width:100%;
 .content-display{
   display:flex;
   justify-content: space-between;
-  height:100vh;
+  height:700px;
   overflow-y:scroll;
 
   @media screen and (max-width:1000px){

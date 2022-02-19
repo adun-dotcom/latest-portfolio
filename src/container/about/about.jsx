@@ -8,7 +8,7 @@ export default function AboutSection() {
     <AboutWrapper id='about'>
       <div className='general-container'>
       <div className="about-me">
-      <h2 className="title">About</h2>
+      <h2 className="title">About Me</h2>
                 <div className="text">
                   <div className='title'>
                   <h5>A goal-driven Front-End Developer striving to create world class products.</h5>
